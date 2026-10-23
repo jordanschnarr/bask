@@ -16,6 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  color: var(--textDarkColorSecondary);
   padding: var(--spacingMedium) var(--spacingSmall);
   background-color: var(--backgroundColorTertiary);
   border: none;
@@ -27,11 +28,23 @@
   -webkit-transition: transform 0.3s ease;
   -moz-transition: transform 0.3s ease;
   border-bottom: solid 1px transparent;
+  outline: solid 4px transparent;
+  outline-offset: -4px;
+  border-radius: var(--radiusSmall);
+}
+
+.accordion-header:is(:focus, :focus-visible) {
+  outline-color: var(--interactiveColorFocus);
+}
+
+.accordion-item.is-open .accordion-header:is(:focus, :focus-visible) {
+  border-radius: var(--radiusSmall) var(--radiusSmall) 0 0;
 }
 
 .accordion-item.is-open .accordion-header {
   border-bottom-width: 1px;
   border-bottom-color: var(--borderDarkColorPrimary);
+  border-radius: var(--radiusSmall) var(--radiusSmall) 0 0;
 }
 
 [class*='accent5'] .accordion-item {
