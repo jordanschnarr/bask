@@ -1,0 +1,37 @@
+.divider {
+  width: 100%;
+  background-color: var(--backgroundColorPrimary);
+  overflow: hidden;
+}
+
+.divider-section .container {
+  padding: 0 var(--sectionPaddingSidesX);
+  width: 100%;
+  max-width: var(--containerMaxWidth);
+  margin: 0 auto;
+}
+
+.divider hr {
+  width: 100%;
+  border: solid 1px var(--borderDarkColorPrimary);
+}
+
+.divider-section-accent {
+  background-color: var(--backgroundColorSecondary);
+}
+
+.divider-section-accent2 {
+  background-color: var(--backgroundColorTertiary);
+}
+
+.divider-section-accent3 {
+  background-color: var(--backgroundColorAccent1);
+}
+
+.divider-section-accent4 {
+  background-color: var(--backgroundColorAccent2);
+}
+
+.divider-section-accent5 {
+  background-color: var(--backgroundColorAccent3);
+}

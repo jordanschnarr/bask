@@ -1,0 +1,153 @@
+@media screen and (max-width: 640px) {
+  :root {
+    /*--- Section ---*/
+    --sectionPaddingSidesX: 16px;
+    --sectionPaddingSidesY: 36px;
+    --containerMaxWidth: 1620px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    /*--- Section ---*/
+    --sectionPaddingSidesX: 36px;
+    --sectionPaddingSidesY: 64px;
+    --containerMaxWidth: 1620px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    /*--- Section ---*/
+    --sectionPaddingSidesX: 36px;
+    --sectionPaddingSidesY: 80px;
+    --containerMaxWidth: 1800px;
+  }
+}
+
+.section {
+  padding: var(--sectionPaddingSidesY) 0;
+}
+
+.section .container {
+  margin: 0 auto;
+  padding: 0 var(--sectionPaddingSidesX);
+  max-width: var(--containerMaxWidth);
+}
+
+.section-intro-false .intro {
+  display: none;
+  margin: 0 !important;
+}
+
+.section-intro-true .intro {
+  display: block;
+}
+
+.section .intro {
+  gap: var(--spacingMedium);
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .section-left .container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 36px;
+  }
+
+}
+
+/*--Accent 1--*/
+
+.section-accent {
+  background-color: var(--backgroundColorSecondary);
+}
+
+.section-accent :is(h1, h2) {
+  color: var(--textDarkColorPrimary);
+}
+
+.section-accent :is(h3, h4, p, ol, ul, span) {
+  color: var(--textDarkColorSecondary);
+}
+
+.section-accent :is(.text-eyebrow) {
+  color: var(--textDarkColorTertiary);
+}
+
+/*--Accent 2--*/
+
+.section-accent2 {
+  background-color: var(--backgroundColorTertiary);
+}
+
+.section-accent2 :is(h1, h2) {
+  color: var(--textDarkColorPrimary);
+}
+
+.section-accent2 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textDarkColorSecondary);
+}
+.section-accent2 :is(.text-eyebrow) {
+  color: var(--textDarkColorTertiary);
+}
+
+/*--Accent 3--*/
+
+.section-accent3 {
+  background-color: var(--backgroundColorAccent1);
+}
+
+.section-accent3 :is(h1, h2) {
+  color: var(--textLightColorSecondary);
+}
+
+.section-accent3 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textLightColorPrimary);
+}
+.section-accent3 :is(.text-eyebrow) {
+  color: var(--textLightColorTertiary);
+}
+
+/*--Accent 4--*/
+
+.section-accent4 {
+  background-color: var(--backgroundColorAccent2);
+}
+
+.section-accent4 :is(h1, h2) {
+  color: var(--textDarkColorPrimary);
+}
+
+.section-accent4 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textDarkColorPrimary);
+}
+.section-accent4 :is(.text-eyebrow) {
+  color: var(--textDarkColorTertiary);
+}
+
+/*--Accent 5--*/
+
+.section-accent5 {
+  background-color: var(--backgroundColorAccent3);
+}
+
+.section-accent5 :is(h1, h2) {
+  color: var(--textLightColorSecondary);
+}
+
+.section-accent5 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textLightColorPrimary);
+}
+.section-accent5 :is(.text-eyebrow) {
+  color: var(--textLightColorTertiary);
+}
+
+
+
+/*--Spacing--*/
+
+.section .intro:has(+ .content) {
+  margin-bottom: var(--spacingXLarge);
+}

@@ -1,0 +1,323 @@
+@media screen and (max-width: 640px) {
+  :root {
+    /*--- Section ---*/
+    --bannerContainerPaddingSidesX: 16px;
+    --bannerContainerPaddingSidesY: 24px;
+    --bannerheroPaddingTop: 80px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    /*--- Section ---*/
+    --bannerContainerPaddingSidesX: 24px;
+    --bannerContainerPaddingSidesY: 36px;
+    --bannerheroPaddingTop: 80px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    /*--- Section ---*/
+    --bannerContainerPaddingSidesX: 36px;
+    --bannerContainerPaddingSidesY: 36px;
+    --bannerheroPaddingTop: 100px;
+  }
+}
+
+.banner {
+  background-color: var(--backgroundColorPrimary);
+  overflow: hidden;
+}
+
+.banner-accent {
+  background-color: var(--backgroundColorSecondary);
+}
+
+.banner-accent2 {
+  background-color: var(--backgroundColorTertiary);
+}
+
+.banner-accent3 {
+  background-color: var(--backgroundColorAccent1);
+}
+
+.banner-accent4 {
+  background-color: var(--backgroundColorAccent2);
+}
+
+.banner-accent5 {
+  background-color: var(--backgroundColorAccent3);
+}
+
+/*--Fill--*/
+
+.banner .banner-container {
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+}
+
+.banner-fill {
+}
+
+.banner-fill .banner-container {
+  border-radius: 0 0 var(--radiusMain) var(--radiusMain);
+}
+
+.banner-fill .banner-container .content-container {
+  padding: var(--sectionPaddingSidesY) var(--sectionPaddingSidesX);
+  max-width: var(--containerMaxWidth);
+  margin:0 auto;
+  width: 100%;
+}
+
+/*--Hug--*/
+
+.banner-hug {
+  padding: var(--sectionPaddingSidesY) var(--sectionPaddingSidesX);
+}
+
+.banner-hug .banner-container {
+  border-radius: var(--radiusMain) var(--radiusMain) var(--radiusMain)
+    var(--radiusMain);
+  max-width: var(--containerMaxWidth);
+  margin: 0 auto;
+}
+
+.banner-hug .banner-container .content-container {
+  padding: var(--bannerContainerPaddingSidesY)
+    var(--bannerContainerPaddingSidesX);
+}
+
+/*--Accent 1--*/
+
+.banner .banner-container-accent {
+  background-color: var(--backgroundColorSecondary);
+}
+
+.banner .banner-container-accent :is(h1, h2) {
+  color: var(--textDarkColorPrimary);
+}
+
+.banner .banner-container-accent :is(h3, h4, p, ol, ul, span) {
+  color: var(--textDarkColorSecondary);
+}
+
+/*--Accent 2--*/
+
+.banner .banner-container-accent2 {
+  background-color: var(--backgroundColorTertiary);
+}
+
+.banner .banner-container-accent2 :is(h1, h2) {
+  color: var(--textDarkColorPrimary);
+}
+
+.banner .banner-container-accent2 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textDarkColorSecondary);
+}
+
+/*--Accent 3--*/
+
+.banner .banner-container-accent3 {
+  background-color: var(--backgroundColorAccent1);
+}
+
+.banner .banner-container-accent3 :is(h1, h2) {
+  color: var(--textLightColorSecondary);
+}
+
+.banner .banner-container-accent3 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textLightColorPrimary);
+}
+
+/*--Accent 4--*/
+
+.banner .banner-container-accent4 {
+  background-color: var(--backgroundColorAccent2);
+}
+
+.banner .banner-container-accent4 :is(h1, h2) {
+  color: var(--textDarkColorPrimary);
+}
+
+.banner .banner-container-accent4 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textDarkColorPrimary);
+}
+
+/*--Accent 5--*/
+
+.banner .banner-container-accent5 {
+  background-color: var(--backgroundColorAccent3);
+}
+
+.banner .banner-container-accent5 :is(h1, h2) {
+  color: var(--textLightColorSecondary);
+}
+
+.banner .banner-container-accent5 :is(h3, h4, p, ol, ul, span) {
+  color: var(--textLightColorPrimary);
+}
+
+/*--Media--*/
+
+.banner .image-container {
+  overflow: hidden;
+}
+
+.banner .image-container-fill {
+}
+
+.banner-media-left .image-container-hug,
+.banner-media-right .image-container-hug {
+  padding-left: var(--sectionPaddingSidesX);
+  padding-right: var(--sectionPaddingSidesX);
+}
+
+.banner .image-container-hug img {
+  border-radius: var(--radiusMain) var(--radiusMain) var(--radiusMain)
+    var(--radiusMain);
+}
+
+@media screen and (max-width: 1199px) {
+  .banner-media-left .image-container-hug,
+  .banner-media-right .image-container-hug {
+    padding-top: var(--bannerContainerPaddingSidesY);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  /*--Media Left--*/
+  .banner-media-left .banner-container {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+  /*--Media Right--*/
+  .banner-media-right .banner-container {
+    display: flex;
+    flex-direction: row;
+  }
+  /*--Media Right & Left--*/
+  .banner-media-right .content-container,
+  .banner-media-left .content-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .banner-media-right .image-container,
+  .banner-media-left .image-container {
+    width: 50%;
+    align-self: stretch;
+  }
+
+  .banner-media-right img,
+  .banner-media-left img {
+    height: 100%;
+  }
+  /*--Media Top--*/
+  .banner-media-top .banner-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .banner-media-left .image-container-hug,
+  .banner-media-right .image-container-hug {
+    padding: var(--bannerContainerPaddingSidesY) var(--sectionPaddingSidesX);
+  }
+}
+
+/*--Media Background--*/
+.banner-media-background .banner-container {
+  min-height: 85vh;
+  position: relative;
+  display: flex;
+}
+
+.banner-media-background .banner-container .image-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.banner-media-background .banner-container .image-container img {
+  aspect-ratio: unset !important;
+  width: 100%;
+  height: 100%;
+}
+.banner-media-background .banner-container .content-container {
+  position: relative;
+  /*--
+  background: linear-gradient(
+    to top,
+    rgba(29, 38, 7, 0.7),
+    rgba(29, 38, 7, 0.2)
+  );
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  --*/
+  z-index: 3;
+}
+.banner-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.overlay-10 {
+  background: rgba(0, 0, 0, 0.1);
+}
+.overlay-20 {
+  background: rgba(0, 0, 0, 0.2);
+}
+.overlay-30 {
+  background: rgba(0, 0, 0, 0.3);
+}
+.overlay-40 {
+  background: rgba(0, 0, 0, 0.4);
+}
+.overlay-50 {
+  background: rgba(0, 0, 0, 0.5);
+}
+.overlay-60 {
+  background: rgba(0, 0, 0, 0.6);
+}
+.overlay-70 {
+  background: rgba(0, 0, 0, 0.7);
+}
+.overlay-80 {
+  background: rgba(0, 0, 0, 0.8);
+}
+.overlay-90 {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+.blur-1px {
+  -webkit-backdrop-filter: blur(1px);
+  backdrop-filter: blur(1px);
+}
+.blur-2px {
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.blur-5px {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.blur-10px {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+@media screen and (min-width: 1200px) {
+  .banner-media-background .banner-container .content-container {
+    padding-top: var(--spacingSmall);
+    padding-bottom: var(--spacingLarge);
+  }
+}
+
+.banner-hero .banner-container {
+  padding-top: var(--bannerheroPaddingTop);
+}

@@ -1,0 +1,12 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.column-align-center {
+  justify-content: center;
+}
+.column-align-bottom {
+  justify-content: flex-end;
+}

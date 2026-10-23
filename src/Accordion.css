@@ -1,0 +1,91 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordion-item {
+  border-radius: var(--radiusSmall);
+  overflow: hidden;
+  background-color: var(--backgroundColorPrimary);
+  border: solid 0px var(--borderDarkColorPrimary);
+}
+
+.accordion-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacingMedium) var(--spacingSmall);
+  background-color: var(--backgroundColorTertiary);
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--fontFamilyPrimary);
+  font-size: var(--fontSizeMedium);
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  border-bottom: solid 1px transparent;
+}
+
+.accordion-item.is-open .accordion-header {
+  border-bottom-width: 1px;
+  border-bottom-color: var(--borderDarkColorPrimary);
+}
+
+[class*='accent5'] .accordion-item {
+  border-color: var(--borderDarkColorSecondary);
+}
+
+[class*='accent5'] .accordion-header {
+  background-color: var(--backgroundColorAccent1);
+}
+
+[class*='accent5'] .accordion-icon i {
+  background-color: var(--interactiveLightColorMain);
+}
+
+.accordion-header.accordion-label-body {
+  font-weight: 700;
+  font-size: var(--fontSizeBase);
+}
+.accordion-header:hover {
+}
+
+.accordion-icon i {
+  display: block;
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+  background-color: var(--interactiveColorMain);
+}
+.accordion-item.is-open .accordion-icon i {
+  transform: rotate(180deg);
+}
+
+.accordion-panel {
+  display: grid;
+  grid-template-rows: 0fr; /* closed */
+  transition: grid-template-rows 0.3s ease;
+  background-color: var(--backgroundColorTertiary);
+}
+
+.accordion-item.is-open .accordion-panel {
+  grid-template-rows: 1fr; /* open — expands to fit content exactly */
+}
+
+.accordion-panel-inner {
+  overflow: hidden; /* required for the grid trick */
+  padding: 0;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+  -moz-transition: transform 0.3s ease;
+}
+
+.accordion-item.is-open .accordion-panel-inner {
+  overflow: hidden; /* required for the grid trick */
+  padding: var(--spacingMedium) var(--spacingSmall);
+}

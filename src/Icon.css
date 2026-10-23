@@ -1,0 +1,20 @@
+.icon {
+  background-color: #000000;
+}
+
+.icon-arrow-right {
+  -webkit-mask: url('assets/Icons/Arrow-Right.svg');
+  mask: url('assets/Icons/Arrow-Right.svg');
+}
+.icon-external-link {
+  -webkit-mask: url('assets/Icons/External-Link.svg');
+  mask: url('assets/Icons/External-Link.svg');
+}
+.icon-plus {
+  -webkit-mask: url('assets/Icons/Plus.svg');
+  mask: url('assets/Icons/Plus.svg');
+}
+.icon-minus {
+  -webkit-mask: url('assets/Icons/Minus.svg');
+  mask: url('assets/Icons/Minus.svg');
+}

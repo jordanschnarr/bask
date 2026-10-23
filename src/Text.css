@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Questrial&display=swap');
+
+:root {
+  --fontFamilyPrimary: 'Questrial';
+  --fontFamilyAlternate: 'Questrial';
+}
+
+/*-- Device Variables --*/
+
+@media screen and (max-width: 640px) {
+  :root {
+    /*--- Font ---*/
+    --fontSizeHuge: 2.1rem;
+    --fontSizeXXLarge: 1.8rem;
+    --fontSizeXLarge: 1.6rem;
+    --fontSizeLarge: 1.4rem;
+    --fontSizeMedium: 1.25rem;
+    --fontSizeBase: 1rem;
+    --fontSizeSmall: 0.9rem;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    /*--- Font ---*/
+    --fontSizeHuge: 2.1rem;
+    --fontSizeXXLarge: 1.8rem;
+    --fontSizeXLarge: 1.6rem;
+    --fontSizeLarge: 1.4rem;
+    --fontSizeMedium: 1.25rem;
+    --fontSizeBase: 1rem;
+    --fontSizeSmall: 0.9rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    /*--- Font ---*/
+    --fontSizeHuge: 3.8rem;
+    --fontSizeXXLarge: 3rem;
+    --fontSizeXLarge: 2.4rem;
+    --fontSizeLarge: 2rem;
+    --fontSizeMedium: 1.5rem;
+    --fontSizeBase: 1rem;
+    --fontSizeSmall: 0.9rem;
+  }
+}
+
+html {
+  color: var(--textDarkColorSecondary);
+  font-size: 16px;
+  font-family: var(--fontFamilyPrimary), sans-serif;
+  font-weight: 400;
+  line-height: 150%;
+  font-style: normal;
+  font-optical-sizing: auto;
+  letter-spacing: 1%;
+}
+
+h1,
+.text-h1 {
+  font-family: var(--fontFamilyAlternate), sans-serif;
+  font-size: var(--fontSizeHuge);
+  color: var(--textDarkColorPrimary);
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: 2%;
+}
+
+h2,
+.text-h2 {
+  font-family: var(--fontFamilyAlternate), sans-serif;
+  font-size: var(--fontSizeXXLarge);
+  color: var(--textDarkColorPrimary);
+  line-height: 120%;
+  font-weight: 400;
+
+  letter-spacing: 2%;
+}
+
+h3,
+.text-h3 {
+  font-size: var(--fontSizeXLarge);
+  line-height: 120%;
+}
+
+h4,
+.text-h4 {
+  font-size: var(--fontSizeLarge);
+  line-height: 120%;
+}
+
+.text-caption {
+  font-size: var(--fontSizeSmall);
+  display: block;
+}
+
+.text-eyebrow {
+  font-size: var(--fontSizeSmall);
+  display: block;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+  font-weight: 900;
+  color: var(--textDarkColorTertiary);
+}
+
+
+
+@media screen and (min-width: 1200px) {
+  :is(h1, h2, h3) {
+    width: 100%;
+    max-width: 1200px;
+  }
+  :is(h4, h5, h6, p, ol, ul) {
+    width: 100%;
+    max-width: 800px;
+  }
+}

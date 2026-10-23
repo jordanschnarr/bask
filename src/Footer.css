@@ -1,0 +1,91 @@
+@media screen and (max-width: 640px) {
+  :root {
+    --footerLogoDimensionsMaxWidth: 125px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    --footerLogoDimensionsMaxWidth: 125px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --footerLogoDimensionsMaxWidth: 175px;
+  }
+}
+
+footer {
+  background-color: var(--backgroundColorAccent3);
+  color: var(--textLightColorSecondary);
+  padding: var(--sectionPaddingSidesY) 0;
+  font-size: var(--fontSizeSmall);
+}
+footer .container {
+  padding: 0 var(--sectionPaddingSidesX);
+  max-width: var(--containerMaxWidth);
+  margin: 0 auto;
+}
+footer .logo img {
+  width: 100%;
+  max-width: var(--footerLogoDimensionsMaxWidth);
+}
+
+footer nav {
+  padding-bottom: var(--spacingXLarge);
+  border-bottom: solid 1px;
+  margin-bottom: var(--spacingXLarge);
+}
+
+footer .heading {
+  display: block;
+  text-transform: uppercase;
+  margin-bottom: var(--spacingSmall);
+  color: var(--textLightColorPrimary);
+}
+
+footer nav .list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacingSmall);
+}
+
+footer nav a {
+  color: var(--interactiveLightColorMain);
+  border-left: solid 2px transparent;
+  text-decoration: none;
+  width: fit-content;
+  border-radius: 2px;
+}
+
+footer nav a:is(:hover, :focus, :active) {
+  color: var(--interactiveLightColorHover);
+  padding-left: 6px;
+  border-color: var(--interactiveLightColorHover);
+}
+
+footer nav a:focus {
+  outline-color: var(--interactiveLightColorFocus);
+}
+
+@media screen and (max-width: 1199px) {
+  footer .logo {
+    padding-bottom: var(--spacingXLarge);
+    border-bottom: solid 1px;
+    margin-bottom: var(--spacingXLarge);
+  }
+  footer nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+  }
+  footer nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

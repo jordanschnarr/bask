@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*-- Device Variables --*/
+
+@media screen and (max-width: 640px) {
+  :root {
+    /*--- Spacing ---*/
+    --spacingXSmall: 8px;
+    --spacingSmall: 16px;
+    --spacingMedium: 20px;
+    --spacingLarge: 24px;
+    --spacingXLarge: 36px;
+    --spacingXXLarge: 48px;
+    --spacingHuge: 64px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    /*--- Spacing ---*/
+    --spacingXSmall: 8px;
+    --spacingSmall: 16px;
+    --spacingMedium: 20px;
+    --spacingLarge: 24px;
+    --spacingXLarge: 36px;
+    --spacingXXLarge: 48px;
+    --spacingHuge: 64px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    /*--- Spacing ---*/
+
+    --spacingXSmall: 16px;
+    --spacingSmall: 20px;
+    --spacingMedium: 24px;
+    --spacingLarge: 36px;
+    --spacingXLarge: 48px;
+    --spacingXXLarge: 64px;
+    --spacingHuge: 80px;
+  }
+}
+
+/*-- Main Variables --*/
+
+:root {
+  /*-- Colors --*/
+  --backgroundColorPrimary: #f4f0d4;
+  --backgroundColorSecondary: #fffdee;
+  --backgroundColorTertiary: #d6d1b6;
+  --backgroundColorAccent1: #2f3f0d;
+  --backgroundColorAccent2: #7ca037;
+  --backgroundColorAccent3: #1d2607;
+
+  --textDarkColorPrimary: #2f3f0d;
+  --textDarkColorSecondary: #1d2607;
+  --textDarkColorTertiary: #68624a;
+  --textLightColorPrimary: #fffdee;
+  --textLightColorSecondary: #f4f0d4;
+  --textLightColorTertiary: #7ca037;
+
+  --borderDarkColorPrimary: #a39e88;
+  --borderDarkColorSecondary: #2f3f0d;
+  --borderLightColorPrimary: #d6d1b6;
+  --borderLightColorSecondary: #f4f0d4;
+
+  --interactiveColorMain: #2f3f0d;
+  --interactiveColorHover: #1d2607;
+  --interactiveColorFocus: #6d3811;
+  --interactiveColorDisabled: #626262;
+  --interactiveLightColorMain: #f4f0d4;
+  --interactiveLightColorHover: #d6d1b6;
+  --interactiveLightColorFocus: #ffcba6;
+  --interactiveLightColorDisabled: #dedede;
+
+  --iconColorDark: #1d2607;
+  --iconColorLight: #d6d1b6;
+
+  /*-- Radius --*/
+  --radiusMain: 24px;
+  --radiusSmall: 12px;
+  --radiusLarge: 48px;
+  --radiusNone: 0px;
+  --radiusFull: 1000px;
+}
+
+html {
+  /*-- Backgrounds --*/
+  background-color: var(--backgroundColorPrimary);
+  scroll-behavior: smooth;
+}
+
+/*-- Links --*/
+
+a {
+  color: var(--interactiveColorMain);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  outline-offset: 1px;
+  outline: solid 3px transparent;
+}
+
+a:hover {
+  color: var(--interactiveColorHover);
+}
+
+a:focus {
+  outline-color: var(--interactiveColorFocus);
+  color: var(--interactiveColorHover);
+}
+
+a:active {
+  color: var(--interactiveColorHover);
+}
+
+a:disabled {
+  color: var(--interactiveColorDisabled);
+}
+
+:is(h1, h2, h3, h4):has(+ p, + ul, + ol) {
+  margin-bottom: 8px;
+}
+
+:is(h1, h2, h3, h4, p, ol, ul):has(+ .btn) {
+  margin-bottom: var(--spacingMedium);
+}
+
+:is(p, ul, ol):has(+ p, + ul, + ol) {
+  margin-bottom: 1.2em;
+}
+
+:is(p, ol, ul):has(+ h2, + h3, + h4, + h5) {
+  margin-bottom: var(--spacingXLarge);
+}
+
+:is(.text-eyebrow):has(+ h1, + h2, + h3, + h4) {
+  margin-bottom: 8px;
+}

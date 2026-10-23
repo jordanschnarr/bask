@@ -1,0 +1,137 @@
+@media screen and (max-width: 640px) {
+  :root {
+    --buttonPadding: 6px 16px;
+  }
+}
+@media screen and (min-width: 641px) and (max-width: 1199px) {
+  :root {
+    --buttonPadding: 6px 24px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  :root {
+    --buttonPadding: 8px 24px;
+  }
+}
+
+/* shared by all buttons */
+.btn {
+  color: var(--interactiveColorMain);
+  font-weight: 600;
+  transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  outline-offset: 1px;
+  outline: solid 3px transparent;
+  border-radius: var(--radiusFull);
+  padding: var(--buttonPadding);
+  display: flex;
+  border: solid 3px var(--interactiveColorMain);
+  text-decoration: none;
+  cursor: pointer;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  width: fit-content;
+}
+
+@media screen and (max-width: 640px) {
+  .btn {
+    width: 100%;
+  }
+}
+
+.btn i.icon {
+  background-color: var(--interactiveColorMain);
+  width: 14px;
+  height: 14px;
+}
+
+/* PRIMARY BUTTON */
+.btn-primary {
+  color: var(--textLightColorPrimary);
+  background-color: var(--interactiveColorMain);
+}
+
+.btn-primary i.icon {
+  background-color: var(--textLightColorPrimary);
+}
+
+.btn-primary:is(:hover, :active, :focus) {
+  color: var(--interactiveColorHover);
+  background-color: transparent;
+  border-color: var(--interactiveColorHover);
+}
+
+.btn-primary:is(:hover, :active, :focus) i.icon {
+  background-color: var(--interactiveColorHover);
+}
+
+/* Inverted */
+
+.btn-primary.btn-inverted {
+  color: var(--interactiveColorMain);
+  background-color: var(--interactiveLightColorMain);
+  border-color: var(--interactiveLightColorMain);
+}
+
+.btn-primary.btn-inverted i.icon {
+  background-color: var(--interactiveColorHover);
+}
+
+.btn-primary.btn-inverted:focus {
+  outline-color: var(--interactiveLightColorFocus);
+}
+
+.btn-primary.btn-inverted:is(:hover, :active, :focus) {
+  color: var(--interactiveLightColorHover);
+  background-color: transparent;
+  border-color: var(--interactiveLightColorHover);
+}
+
+.btn-primary.btn-inverted:is(:hover, :active, :focus) i.icon {
+  background-color: var(--interactiveLightColorHover);
+}
+
+/* SECONDARY BUTTON */
+
+.btn-secondary {
+  background-color: transparent;
+}
+
+.btn-secondary i.icon {
+  background-color: var(--interactiveColorMain);
+}
+
+.btn-secondary:is(:hover, :active, :focus) {
+  color: var(--textLightColorPrimary);
+  background-color: var(--interactiveColorMain);
+}
+
+.btn-secondary:is(:hover, :active, :focus) i.icon {
+  background-color: var(--textLightColorPrimary);
+}
+
+.btn-secondary.btn-inverted {
+  background-color: transparent;
+  color: var(--interactiveLightColorMain);
+  border-color: var(--interactiveLightColorMain);
+}
+
+.btn-secondary.btn-inverted i.icon {
+  background-color: var(--interactiveLightColorMain);
+}
+
+.btn-secondary.btn-inverted:focus {
+  outline-color: var(--interactiveLightColorFocus);
+}
+
+.btn-secondary.btn-inverted:is(:hover, :active, :focus) {
+  color: var(--interactiveColorMain);
+  background-color: var(--interactiveLightColorHover);
+  border-color: var(--interactiveLightColorHover);
+}
+
+.btn-secondary.btn-inverted:is(:hover, :active, :focus) i.icon {
+  background-color: var(--interactiveColorMain);
+}
